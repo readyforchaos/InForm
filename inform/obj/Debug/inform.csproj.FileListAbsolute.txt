@@ -78,3 +78,43 @@ C:\Users\gill\OneDrive\Real Madrid\inform\inform\inform\bin\Newtonsoft.Json.xml
 C:\Users\gill\OneDrive\Real Madrid\inform\inform\inform\obj\Debug\inform.csprojResolveAssemblyReference.cache
 C:\Users\gill\OneDrive\Real Madrid\inform\inform\inform\obj\Debug\inform.dll
 C:\Users\gill\OneDrive\Real Madrid\inform\inform\inform\obj\Debug\inform.pdb
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\csc.exe
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\vbc.exe
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\VBCSCompiler.exe
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\inform.dll.config
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\inform.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\inform.pdb
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Antlr3.Runtime.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Newtonsoft.Json.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Helpers.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Mvc.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Optimization.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Razor.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.Razor.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\WebGrease.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Helpers.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Mvc.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Optimization.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.Razor.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\System.Web.WebPages.Razor.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Antlr3.Runtime.pdb
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\bin\Newtonsoft.Json.xml
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\obj\Debug\inform.csprojResolveAssemblyReference.cache
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\obj\Debug\inform.dll
+C:\Users\gill\Documents\GitHubVisualStudio\InForm\inform\obj\Debug\inform.pdb
