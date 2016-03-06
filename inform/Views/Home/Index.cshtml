@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<section class="masthead fw-block">
+    <div class="container">
+        <h1><span class="thin-font">Is Ronaldo </span>InForm?</h1>
+        <p class="tagline">Made by Team DX - Microsoft Norway</p>
+        <img class="ronaldo" src="~/Content/img/ronaldo.png" alt="Cristiano Ronaldo">
+        <div class="panel messi">
+            <h3 class="middle-text"><span class="boxTxt">Prediction</span></h3>
+            <div class="text">
+                <p>How did Ronaldo perform in todays training session? This will predict the outcome of how he will perform in the match the following day. <br /><b>Insert data from todays training session:</b></p>
+            </div>
+
+            <form name="form1" method="post" action="">
+                <div class="term">
+                    <div class="row">
+                        <ul class="stats">
+                            <div class="col-md-4 stats">
+                                <li class="goals">
+                                    <input class="num" type="text" id="passAcc"> <span class="type em3">Pass Accuracy (%)</span>
+                                </li>
+                            </div>
+                            <div class="col-md-4 stats">
+                                <li class="assists">
+                                    <input class="num" type="text" id="avgBPM"><span class="type  em3">Avg BPM</span>
+                                </li>
+                            </div>
+                            <div class="col-md-4 stats">
+                                <li class="apps">
+                                    <input class="num" type="text" id="sprints"> <span class="type em3"># of Sprints</span>
+                                </li>
+                            </div>
+
+
+
+
+                        </ul>
+
+                    </div>
+                    <div class="row">
+                        <ul class="stats row2">
+                            <li class="assists"><input class="num" type="text" id="topspeed"><span class="type  em3">Top speed (km/h)</span></li>
+                            <li class="assists"><input class="num" type="text" id="balltouches"> <span class="type  em3"># of Ball touches</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </form>
+
+
+
+            <div class="row">
+                <button type="button" name="submit" value="submit" class="btn btn-success">Run InForm</button>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<div class="section-title fw-block">
+    <h1 class="container results">
+        Result
+    </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="stats">
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="goals">
+                    <span class="num numResults">1</span> <span class="type emResults">InMatch Goals</span>
+
+                </li>
+            </div>
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="assists">
+                    <span class="num numResults">0</span> <span class="type  emResults">InMatch Assists</span>
+                </li>
+            </div>
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="apps">
+                    <span class="num numResults">170</span> <span class="type emResults">InMatch Avg BPM</span>
+                </li>
+            </div>
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="apps">
+                    <span class="num numResults">34</span> <span class="type emResults">InMatch Sprints</span>
+                </li>
+            </div>
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="apps">
+                    <span class="num numResults">27</span> <span class="type emResults">InMatch Top Speed (km/h)</span>
+                </li>
+            </div>
+            <div class="col-sm-1 col-lg-2 stats">
+                <li class="apps">
+                    <span class="num numResults">84</span> <span class="type emResults">InMatch Ball Touches</span>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<h1 class="txtResult">Ronaldo is in decent form, but not at his best. You could use him, but you should probably bench him after 73 minutes so he doesn't get injured.</h1>
+
+<div class="panel fb-comments-block">
+    <h3 class="progression">Ronaldo's <span class="thin-font progression">Progression Chart</span></h3>
+    <div id="chart" style="width:100%; height:400px;"></div>
+</div>
+
+
+<div class="row">
+    @*<div class="col-md-4">
+            <h1>BPM</h1>
+            <h1>
+                70
+            </h1>
+        </div>*@
+
+</div>
+

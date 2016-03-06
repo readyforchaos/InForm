@@ -1,0 +1,295 @@
+﻿@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+.row2 {
+    margin-top: 40px;
+
+}
+
+body {
+    font: 95% Roboto, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 95%;
+    line-height: normal;
+    font-family: Roboto, sans-serif;
+    background: url(img/bg.jpg) center 40px fixed no-repeat #373737;
+    color: #fff;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+.ronaldo {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    max-width: 37.5%;
+}
+
+.what-bar {
+    background: rgba(0,0,0,0.5);
+    font-weight: 300;
+    font-size: 2em;
+    padding: 12px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 0.7em!important;
+    text-align: center;
+}
+
+input {
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+}
+
+
+
+.panel {
+    float: left;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 80px;
+    width: 65%;
+}
+
+.middle-text {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    font-size: 3em;
+    position: static;
+    width: 100%;
+    margin-top: 0px;
+}
+
+p {
+        font-size: 1.3em!important;
+}
+
+.stats .goals  .assists .apps {
+       width: 14%;
+}
+
+.em3 {
+    font-size: 2.3em!important;
+}
+
+.emResults {
+        font-size: 2em!important;
+}
+
+
+.btn-success {
+  display: inline-block;
+  margin: 40px;
+  border-radius: 0px;
+  font-family: "Roboto-Thin";
+  font-size: 2em;
+  padding: 12px 20px;
+  border: 0;
+  background: #a90d3d;
+  color: #FFF;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn-success:hover {
+
+  background: #970b36;
+  color: #FFF;
+
+}
+
+    .btn-success:focus {
+          background: #970b36;
+    }
+
+.stats>li {
+    margin-right: 4.4%;
+}
+
+.num {
+    color: #fff;
+}
+
+.stats .num {
+    background: rgba(0,0,0,0.3);
+        text-align: center;
+}
+
+.numResults {
+        background: #970b36!important;
+}
+
+.stats>li {
+    display: inline-block;
+    /*width: 24%;*/
+    z-index: 10;
+}
+
+.has-full-stats .stats>li {
+    position: relative;
+}
+
+.stats .goals .num .assists .apps {
+    font-size: 4.5em;
+}
+
+.stats .num {
+    font-size: 3.7em;
+    line-height: 1.1;
+    padding: 6px 5px 9px;
+}
+
+.stats .num {
+    font-weight: 900;
+    padding: 5px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    position: relative;
+    width: 165px;
+}
+
+.txtResult {
+    font-size: 3em;
+    font-family: Roboto-thin;
+    padding: 20px;
+}
+
+.stats>li>span {
+    display: block;
+}
+
+.section-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 3em;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.results {
+    font-size: 2em!important;
+}
+
+.boxTxt {
+    font-family: Roboto-Thin;
+}
+
+.fb-comments-block {
+    background: #fff;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 15px 15px 35px;
+    margin: 50px auto 0;
+}
+
+.fb-comments-block h3 {
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin: 15px 0 20px;
+}
+
+.progression {
+    /*font-size: 1.9em!important;*/
+}
+
+footer {
+    margin-top: 100px;
+}
+
+.text {
+    font-size: 1.4em!important;
+    line-height: 1.6;
+    margin: 10px 0;
+    padding: 15px 20px;
+
+}
+
+.tagline {
+    font-size: 2.0em;
+}
+
+h1 {
+    font: Roboto-Bold;
+    font-weight: bold;
+    font-size: 7em;
+}
+
+.thin-font {
+    font: Roboto-Thin;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.masthead {
+    text-align: center;
+    position: relative;
+}
+
+.fw-block {
+    width: 100%;
+    float: left;
+}
+
+.masthead .container {
+    position: relative;
+}
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0;
+}
+
+.masthead h1 span {
+    font-family: Roboto;
+    font-weight: 100;
+}
