@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,7 +12,7 @@ namespace inform.Controllers
     public class HomeController : Controller
     {
         private readonly InFormWebService _incomeWebService;
-        public InFormResult InFormResult { get; set; }
+        public InFormPredictionOutput InFormPredictionOutput { get; set; }
 
         public HomeController()
         {
@@ -36,34 +37,22 @@ namespace inform.Controllers
                 && !string.IsNullOrEmpty(topSpeed) &&
                 !string.IsNullOrEmpty(ballTouches))
             {
-                var resultResponse = _incomeWebService.InvokeRequestResponseService<string>("0",
+                var resultResponse = _incomeWebService.InvokeRequestResponseService<InFormResult>("0",
                     avgBPM, sprints, topSpeed, ballTouches).Result;
 
                 if (resultResponse != null)
                 {
-                }
-            }
+                    var result = resultResponse.Results.InFormOutput.Value.Values;
 
-
-            /*
-            var gender = Request.Form["gender"];
-            var age = Request.Form["age"];
-
-            if (!string.IsNullOrEmpty(gender) && !string.IsNullOrEmpty(age))
-            {
-                var resultResponse = _incomeWebService.InvokeRequestResponseService<ResultOutcome>(gender, age).Result;
-
-                if (resultResponse != null)
-                {
-                    var result = resultResponse.Results.Output1.Value.Values;
-                    PersonResult = new Person
+                    InFormPredictionOutput = new InFormPredictionOutput
                     {
-                        Gender = result[0, 0],
-                        Age = Int32.Parse(result[0, 1]),
-                        Income = float.Parse(result[0, 3], CultureInfo.InvariantCulture.NumberFormat)
+                        PredictionBPM = float.Parse(result[0][0], CultureInfo.InvariantCulture.NumberFormat),
+                        PredictionBallTouches = float.Parse(result[0][1], CultureInfo.InvariantCulture.NumberFormat),
+                        PredictionSprints = float.Parse(result[0][2], CultureInfo.InvariantCulture.NumberFormat),
+                        PredictionTopSpeed = float.Parse(result[0][3], CultureInfo.InvariantCulture.NumberFormat)
                     };
                 }
-            } */
+            }
 
             return View("Index");
         }
