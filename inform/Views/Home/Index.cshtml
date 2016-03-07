@@ -14,14 +14,14 @@
                 <p>How did Ronaldo perform in todays training session? This will predict the outcome of how he will perform in the match the following day. <br /><b>Insert data from todays training session:</b></p>
             </div>
 
-            <form name="form1" method="post" action="">
+            <form name="form1" method="post" action="/Home/GetPredictionFromWebService">
                 <div class="term">
                     <div class="row">
                         <ul class="stats">
                             <div class="col-md-4 stats">
                                 <li class="goals">
                                     <strike><input class="num" type="text" id="passAcc"></strike><span class="type em3"><strike>Pass Accuracy (%)</strike></span>
-</li>
+                                </li>
                             </div>
                             <div class="col-md-4 stats">
                                 <li class="assists">
@@ -33,10 +33,6 @@
                                     <input class="num" type="text" id="sprints"> <span class="type em3"># of Sprints</span>
                                 </li>
                             </div>
-
-
-
-
                         </ul>
 
                     </div>
@@ -49,16 +45,9 @@
 
                 </div>
             </form>
-
-
-
             <div class="row">
                 <button type="button" name="submit" value="submit" class="btn btn-success">Run InForm</button>
             </div>
-
-
-
-
         </div>
     </div>
 </section>
