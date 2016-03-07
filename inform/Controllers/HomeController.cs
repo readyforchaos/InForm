@@ -26,6 +26,9 @@ namespace inform.Controllers
         [HttpPost]
         public ActionResult GetPredictionFromWebService()
         {
+
+            System.Threading.Thread.Sleep(4000);
+
             var passAcc = Request.Form["passAcc"];
             var avgBPM = Request.Form["avgBPM"];
             var sprints = Request.Form["sprints"];
