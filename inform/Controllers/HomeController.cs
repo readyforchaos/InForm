@@ -54,8 +54,19 @@ namespace inform.Controllers
                         PredictionSprints = float.Parse(result[0][2], CultureInfo.InvariantCulture.NumberFormat),
                         PredictionTopSpeed = float.Parse(result[0][3], CultureInfo.InvariantCulture.NumberFormat)
                     };
+
+
+
+
+                    ViewBag.predictionBPM = InFormPredictionOutput.PredictionBPM.ToString();
+                    ViewBag.predictionBallTouches = InFormPredictionOutput.PredictionBallTouches.ToString();
+                    ViewBag.predictionSprints = InFormPredictionOutput.PredictionSprints.ToString();
+                    ViewBag.predictionTopSpeed = InFormPredictionOutput.PredictionTopSpeed.ToString();
+
                 }
+
             }
+
 
             return View("Index");
         }
