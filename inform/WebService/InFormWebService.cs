@@ -15,7 +15,7 @@ namespace inform.WebService
 {
     public class InFormWebService
     {
-        private string apiKey = WebConfigurationManager.AppSettings["7vUYNtX0bTtsrL8+bMqbJ9W0wGXGxfolBWidCR4LHDJQNdDKkzGHWaI+8iCT3h9cft9KBQPAbEm5cP91edlLbg=="];
+        private string apiKey = WebConfigurationManager.AppSettings["InFormWebServiceApiKey"];
 
 
         public async Task<T> InvokeRequestResponseService<T>(string passAccuracy, string avgBpm, string numOfSprints, 
@@ -48,7 +48,7 @@ namespace inform.WebService
                 var convertValues = new string[personValues.Count(), propertyCount];
                 for (var i = 0; i < convertValues.GetLength(0); i++)
                 {
-                    convertValues[i, 0] = personValues[i].Date.Value.ToString("dd.MM.yyyy");
+                    convertValues[i, 0] = "value";
                     convertValues[i, 1] = personValues[i].PassAccuracyInPercentage.ToString();
                     convertValues[i, 2] = personValues[i].AvgBPM.ToString();
                     convertValues[i, 3] = personValues[i].NumberOfSprints.ToString();
@@ -68,7 +68,7 @@ namespace inform.WebService
                 {
                     Inputs = new Dictionary<string, InFormTable>() {
                         {
-                            "input1",
+                            "InFormInput",
                             new InFormTable()
                             {
                                 ColumnNames = new [] {
@@ -92,11 +92,12 @@ namespace inform.WebService
                     },
                     GlobalParameters = new Dictionary<string, string>()
                     {
+                        { "Append score columns to output", "" }
                     }
                 };
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/033d6f8d8b064d6ea124312bd0177ae2/services/5730cfea87244590bb746f0bfbf3b3f1/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://europewest.services.azureml.net/workspaces/e9cee52eb6544a33a7048158f08c74c1/services/5437961661814332bb2b534bef774a5f/execute?api-version=2.0&details=true");
 
 
                 HttpResponseMessage response = await client.PostAsJsonAsync("", scoreRequest).ConfigureAwait(false);

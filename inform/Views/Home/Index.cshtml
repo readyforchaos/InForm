@@ -25,12 +25,12 @@
                             </div>
                             <div class="col-md-4 stats">
                                 <li class="assists">
-                                    <input class="num" type="text" id="avgBPM"><span class="type  em3">Avg BPM</span>
+                                    <input name="avgBPM" class="num" type="text" id="avgBPM"><span class="type  em3">Avg BPM</span>
                                 </li>
                             </div>
                             <div class="col-md-4 stats">
                                 <li class="apps">
-                                    <input class="num" type="text" id="sprints"> <span class="type em3"># of Sprints</span>
+                                    <input name="sprints" class="num" type="text" id="sprints"> <span class="type em3"># of Sprints</span>
                                 </li>
                             </div>
                         </ul>
@@ -38,16 +38,17 @@
                     </div>
                     <div class="row">
                         <ul class="stats row2">
-                            <li class="assists"><input class="num" type="text" id="topspeed"><span class="type  em3">Top speed (km/h)</span></li>
-                            <li class="assists"><input class="num" type="text" id="balltouches"> <span class="type  em3"># of Ball touches</span></li>
+                            <li class="assists"><input name="topspeed" class="num" type="text" id="topspeed"><span class="type  em3">Top speed (km/h)</span></li>
+                            <li class="assists"><input name="balltouches" class="num" type="text" id="balltouches"> <span class="type  em3"># of Ball touches</span></li>
                         </ul>
                     </div>
 
                 </div>
+                <div class="row">
+                    <button type="submit" name="submit" value="submit" class="btn btn-success">Run InForm</button>
+                </div>
             </form>
-            <div class="row">
-                <button type="button" name="submit" value="submit" class="btn btn-success">Run InForm</button>
-            </div>
+
         </div>
     </div>
 </section>

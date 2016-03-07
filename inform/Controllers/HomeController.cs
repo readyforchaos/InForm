@@ -27,17 +27,17 @@ namespace inform.Controllers
         public ActionResult GetPredictionFromWebService()
         {
             var passAcc = Request.Form["passAcc"];
-            var avbBPM = Request.Form["avgBPM"];
+            var avgBPM = Request.Form["avgBPM"];
             var sprints = Request.Form["sprints"];
             var topSpeed = Request.Form["topspeed"];
             var ballTouches = Request.Form["balltouches"];
 
-            if (!string.IsNullOrEmpty(avbBPM) && !string.IsNullOrEmpty(sprints)
+            if (!string.IsNullOrEmpty(avgBPM) && !string.IsNullOrEmpty(sprints)
                 && !string.IsNullOrEmpty(topSpeed) &&
                 !string.IsNullOrEmpty(ballTouches))
             {
                 var resultResponse = _incomeWebService.InvokeRequestResponseService<string>("0",
-                    avbBPM, sprints, topSpeed, ballTouches).Result;
+                    avgBPM, sprints, topSpeed, ballTouches).Result;
 
                 if (resultResponse != null)
                 {
