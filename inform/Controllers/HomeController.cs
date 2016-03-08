@@ -28,7 +28,7 @@ namespace inform.Controllers
         public ActionResult GetPredictionFromWebService()
         {
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(1000);
 
             var passAcc = Request.Form["passAcc"];
             var avgBPM = Request.Form["avgBPM"];
@@ -58,16 +58,23 @@ namespace inform.Controllers
 
 
 
-                    ViewBag.predictionBPM = InFormPredictionOutput.PredictionBPM.ToString();
-                    ViewBag.predictionBallTouches = InFormPredictionOutput.PredictionBallTouches.ToString();
-                    ViewBag.predictionSprints = InFormPredictionOutput.PredictionSprints.ToString();
-                    ViewBag.predictionTopSpeed = InFormPredictionOutput.PredictionTopSpeed.ToString();
+                    ViewBag.predictionBPM = InFormPredictionOutput.PredictionBPM.ToString("#.##");
+                    ViewBag.predictionBallTouches = InFormPredictionOutput.PredictionBallTouches.ToString("#.##");
+                    ViewBag.predictionSprints = InFormPredictionOutput.PredictionSprints.ToString("#.##");
+                    ViewBag.predictionTopSpeed = InFormPredictionOutput.PredictionTopSpeed.ToString("#.##");
 
                 }
 
             }
 
+            if (ViewBag.predictionBPM != null)
+            {
+                ViewBag.Abstract = "Ronaldo is in good form, but not at his best. His expected performance is about 82% of current known potential (this is currently pre-generated and is not dynamic in this pre-aplha stage).";
+            }
 
+            ViewBag.Results = "show results";
+            
+            ViewBag.Chart = "show chart";
             return View("Index");
         }
     }

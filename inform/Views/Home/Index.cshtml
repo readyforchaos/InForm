@@ -7,7 +7,7 @@
     <div class="container">
         <div id="divLoading" style="margin: 0px; padding: 0px; position: fixed; right: 0px;
     top: 0px; width: 100%; height: 100%; background-color: #666666; z-index: 30001;
-    opacity: .8; filter: alpha(opacity=70);display:none">
+    opacity: .8; filter: alpha(opacity=70); display:none">
             <p style="position: absolute; top: 30%; left: 45%; color: White;">
                 <span class="loading">
                     <span></span>
@@ -15,6 +15,7 @@
                     <span></span>
                     <span></span>
                 </span>
+                Predicting...
             </p>
         </div>
         <h1><span class="thin-font">Is Ronaldo </span>InForm?</h1>
@@ -30,21 +31,23 @@
                 <div class="term">
                     <div class="row">
                         <ul class="stats">
-                            <div class="col-md-4 stats">
+                            <div class="col-xs-6 col-sm-3 col-md-4 stats">
                                 <li class="goals">
-                                    <strike><input class="num" type="text" id="passAcc"></strike><span class="type em3"><strike>Pass Accuracy (%)</strike></span>
+                                    <strike><input readonly class="num notImplemented" value="Not yet implemented" type="text" id="passAcc"></strike><span class="type em3"><strike>Pass Accuracy (%)</strike></span>
                                 </li>
                             </div>
-                            <div class="col-md-4 stats">
+                            <div class="col-xs-6 col-sm-3 col-md-4 stats">
                                 <li class="assists">
                                     <input name="avgBPM" class="num" type="text" id="avgBPM"><span class="type  em3">Avg BPM</span>
                                 </li>
                             </div>
-                            <div class="col-md-4 stats">
+                            <div class="col-xs-12 col-sm-3 col-md-4 stats">
                                 <li class="apps">
                                     <input name="sprints" class="num" type="text" id="sprints"> <span class="type em3"># of Sprints</span>
                                 </li>
+                                
                             </div>
+                            
                         </ul>
 
                     </div>
@@ -58,10 +61,22 @@
                 </div>
                 <div class="row">
                     <button onclick="JavascriptFunction();" type="submit" name="submit" value="submit" class="btn btn-success">Run InForm</button>
-                    <script type="text/javascript" language="javascript">
+                    <p  onclick="JavascriptFill();" class="exampleButton">Get example input (click twice)</p>
+                <script type="text/javascript" language="javascript">
+                    function JavascriptFill() {
+                        $(".exampleButton").click(function () {
+                            $(this).closest('form').find("input[name=topspeed], textarea").val("28");
+                            $(this).closest('form').find("input[name=balltouches], textarea").val("72");
+                            $(this).closest('form').find("input[name=sprints], textarea").val("64");
+                            $(this).closest('form').find("input[name=avgBPM], textarea").val("167");
+                        });
+                    }
+                </script>    
+                <script type="text/javascript" language="javascript">
     function JavascriptFunction() {
         var url = '@Url.Action("GetPredictionFromWebService", "Home")';
         $("#divLoading").show();
+
         $.post(url, null,
                 function (data) {
                     $("#PID")[0].innerHTML = data;
@@ -75,56 +90,72 @@
     </div>
 </section>
 
-<div class="section-title fw-block">
-    <h1 class="container results">
-        Result
-    </h1>
-</div>
 
-<div class="container">
-    <div class="row">
-        <ul class="stats">
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="goals">
-                    <span class="num numResults">1</span> <span class="type emResults">InMatch Goals</span>
 
-                </li>
-            </div>
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="assists">
-                    <span class="num numResults">0</span> <span class="type  emResults">InMatch Assists</span>
-                </li>
-            </div>
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="apps">
-                    <span class="num numResults">@ViewBag.predictionBPM</span> <span class="type emResults">InMatch Avg BPM</span>
-                </li>
-            </div>
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="apps">
-                    <span class="num numResults">@ViewBag.predictionSprints</span> <span class="type emResults">InMatch Sprints</span>
-                </li>
-            </div>
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="apps">
-                    <span class="num numResults">@ViewBag.predictionTopSpeed</span> <span class="type emResults">InMatch Top Speed (km/h)</span>
-                </li>
-            </div>
-            <div class="col-sm-1 col-lg-2 stats">
-                <li class="apps">
-                    <span class="num numResults">@ViewBag.predictionBallTouches</span> <span class="type emResults">InMatch Ball Touches</span>
-                </li>
-            </div>
-        </ul>
+@if (ViewBag.Results != null)
+{
+    <div class="section-title fw-block">
+        <h1 class="container results">
+            Result
+        </h1>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <ul class="stats">
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="goals">
+                        <span class="num numResults"></span>Still to come<span class="type emResults">InMatch Goals</span>
 
-<h1 class="txtResult">Ronaldo is in decent form, but not at his best. You could use him, but you should probably bench him after 73 minutes so he doesn't get injured.</h1>
+                    </li>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="assists">
+                        <span class="num numResults"></span>Still to come<span class="type  emResults">InMatch Assists</span>
+                    </li>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="apps">
+                        <span class="num numResults">@ViewBag.predictionBPM</span> <span class="type emResults">InMatch Avg BPM</span>
+                    </li>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="apps">
+                        <span class="num numResults">@ViewBag.predictionSprints</span> <span class="type emResults">InMatch Sprints</span>
+                    </li>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="apps">
+                        <span class="num numResults">@ViewBag.predictionTopSpeed</span> <span class="type emResults">InMatch Top Speed (km/h)</span>
+                    </li>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-2 stats">
+                    <li class="apps">
+                        <span class="num numResults">@ViewBag.predictionBallTouches</span> <span class="type emResults">InMatch Ball Touches</span>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+}
 
-<div class="panel fb-comments-block">
-    <h3 class="progression">Ronaldo's <span class="thin-font progression">Progression Chart</span></h3>
-    <div id="chart" style="width:100%; height:400px;"></div>
-</div>
+
+@if (ViewBag.Abstract != null)
+{
+    <div id="abstract">
+        <h1 class="txtResult">@ViewBag.Abstract</h1>
+    </div>
+}
+
+@if (ViewBag.Chart != null)
+{
+    <div class="panel fb-comments-block">
+        <h3 class="progression">Ronaldo's <span class="thin-font progression">Progression Chart</span></h3>
+        <div id="chart" style="width:100%; height:400px;"></div>
+    </div>
+}
+
+
+
 
 
 <div class="row">

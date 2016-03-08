@@ -226,85 +226,75 @@
         },
         yAxis: {
             title: {
-                text: 'Values'
+                text: 'Performance percentage * 10'
             },
             minorGridLineWidth: 0,
             gridLineWidth: 0,
             alternateGridColor: null,
-            plotBands: [{ // Light air
-                from: 0.3,
-                to: 1.5,
-                color: 'rgba(68, 170, 213, 0.1)',
-                label: {
-                    text: 'Really bad form',
-                    style: {
-                        color: '#606060'
-                    }
-                }
-            }, { // Light breeze
-                from: 1.5,
-                to: 3.3,
+            plotBands: [{ 
+                from: 0,
+                to: 5,
                 color: 'rgba(0, 0, 0, 0)',
                 label: {
                     text: 'Bad form',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
-            }, { // Gentle breeze
-                from: 3.3,
-                to: 5.5,
+            }, {
+                from: 5,
+                to: 8,
                 color: 'rgba(68, 170, 213, 0.1)',
                 label: {
                     text: 'Form Below average',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
-            }, { // Moderate breeze
-                from: 5.5,
-                to: 8,
+            }, { 
+                from: 8,
+                to: 9,
                 color: 'rgba(0, 0, 0, 0)',
                 label: {
                     text: 'Decent form',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
-            }, { // Fresh breeze
-                from: 8,
-                to: 11,
+            }, { 
+                from: 9,
+                to: 10,
                 color: 'rgba(68, 170, 213, 0.1)',
                 label: {
                     text: 'Good form',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
-            }, { // Strong breeze
-                from: 11,
-                to: 14,
+            }, { 
+                from: 10,
+                to: 11,
                 color: 'rgba(0, 0, 0, 0)',
                 label: {
                     text: 'Very good form',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
-            }, { // High wind
-                from: 14,
-                to: 15,
+            }, { 
+                from: 11,
+                to: 12,
                 color: 'rgba(68, 170, 213, 0.1)',
                 label: {
                     text: 'Ballon dOr',
                     style: {
-                        color: '#606060'
+                        color: '#DADADA'
                     }
                 }
             }]
         },
         tooltip: {
-            valueSuffix: ' m/s'
+            valueSuffix: '*10 = %'
         },
         plotOptions: {
             spline: {
@@ -317,17 +307,17 @@
                 marker: {
                     enabled: false
                 },
-                pointInterval: 3600000, // one hour
-                pointStart: Date.UTC(2015, 4, 31, 0, 0, 0)
+                pointInterval: 1000000000, // one hour
+                pointStart: Date.UTC(2015, 7, 23, 0, 0, 0)
             }
         },
         series: [{
-            name: 'Assists',
-            data: [0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+            name: 'Avg. form throughout Real Madrid career',
+            data: [7, 7, 7.6, 7.3, 7.7, 8, 7, 8.9, 7.9, 8, 8.6, 9, 9.1, 9.2, 9.5, 9.7, 8.9, 9, 10.6, 10.1, 10.7, 10, 9.7, 9.8, 10.1, 10.2, 10.2, 9.9, 10.1, 10.4, 10, 9.6, 8.2, 8, 8.2, 7.5, 7.6, 7.1, 7, 7.3, 8, 9, 9.8, 10.6, 10.8, 10.7, 10.8, 11, 11]
 
         }, {
-            name: 'Goals',
-            data: [0, 0, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.1, 0.3, 0.3, 0, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 3.1, 2.5, 1.5, 1.9, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
+            name: 'So far current season',
+            data: [8, 8.2, 7.6, 7.9, 8, 8.2, 8, 8.1, 8.3, 8.1, 8.4, 8.5, 8.6, 8.4, 8.8, 9.1, 9, 9.3, 10.1, 9.9, 10.1, 10.4, 10.7, 9, 9.5, 9.4, 9, 8.3, 8, 7.8, 8.2, 8.1, 8.3, 7.3, 8, 9.1, 9.1, 9.5, 9.5, 9.9, 10.6, 10.9, ]
         }],
         navigation: {
             menuItemStyle: {
