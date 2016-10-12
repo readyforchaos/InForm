@@ -1,1 +1,1 @@
-# Give me all the awards. '#' SadNaldo
+# Give me all the awards. #SadNaldo
