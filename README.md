@@ -1,1 +1,1 @@
-# Give me all the awards. #SadNaldo
+# Machine Learning Demo on Cristiano Ronaldo (http://ronaldoinform.azurewebsites.net/)
